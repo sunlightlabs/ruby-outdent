@@ -1,7 +1,7 @@
 class String
 
-  # Removes common indentation from each line of a string
-  def unindent
+  # Unindent. Removes common indentation from each line of a string.
+  def outdent
     drop_from_each_line(find_minimum_indent)
   end
 

@@ -1,8 +1,8 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe "unindent" do
+describe "outdent" do
   it "should handle the README example" do
-    x = <<-BLOCK.unindent
+    x = <<-BLOCK.outdent
       <html>
         <body>
           <p>Hello</p>
@@ -13,16 +13,16 @@ describe "unindent" do
   end
 
   it "should handle ugly heredoc against left margin" do
-    x = <<-BLOCK.unindent
+    x = <<-BLOCK.outdent
 a
 b
 c
     BLOCK
-    x.unindent.should == "a\nb\nc\n"
+    x.outdent.should == "a\nb\nc\n"
   end
 
   it "should handle a basic example" do
-    x = <<-BLOCK.unindent
+    x = <<-BLOCK.outdent
       a
       b
       c
@@ -31,7 +31,7 @@ c
   end
 
   it "should handle an example with 2 indent levels" do
-    x = <<-BLOCK.unindent
+    x = <<-BLOCK.outdent
       X 1 2
         yada yada
       Z Z Z
@@ -40,7 +40,7 @@ c
   end
 
   it "should handle an example with 3 indent levels" do
-    x = <<-BLOCK.unindent
+    x = <<-BLOCK.outdent
           A
         B
       C
@@ -50,7 +50,7 @@ c
   end
 
   it "should preserve varying indent levels a blank line" do
-    x = <<-BLOCK.unindent
+    x = <<-BLOCK.outdent
       The first line
         The second line
         
@@ -60,7 +60,7 @@ c
   end
 
   it "should not let blank lines break the indent" do
-    x = <<-BLOCK.unindent
+    x = <<-BLOCK.outdent
       The first line
 
       The third line

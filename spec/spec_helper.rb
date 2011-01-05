@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'rspec'
-require File.expand_path('../../lib/unindentable', __FILE__)
+require File.expand_path('../../lib/outdent', __FILE__)
 
 Rspec.configure do |c|
   c.mock_with :rspec

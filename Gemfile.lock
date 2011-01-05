@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unindentable (0.1.0)
+    outdent (0.2.0)
 
 GEM
   specs:
@@ -19,5 +19,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  outdent!
   rspec (~> 2.4)
-  unindentable!

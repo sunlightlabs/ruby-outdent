@@ -1,6 +1,6 @@
-# Unindentable
+# Outdent
 
-With Unindentable, you can write heredocs without worry of wonky indentation.
+With Outdent, you can write heredocs without worry of wonky indentation.
 
 ## Motivation
 
@@ -38,10 +38,10 @@ So that you get the result you expect:
     > hello
     => "<html>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>\n"
 
-But this doesn't look good in your source.  With Unindentable, you can write:
+But this doesn't look good in your source.  With Outdent, you can write:
 
     def hello
-      html = <<-BLOCK.unindent
+      html = <<-BLOCK.outdent
         <html>
           <body>
             <p>Hello</p>
@@ -50,7 +50,7 @@ But this doesn't look good in your source.  With Unindentable, you can write:
       BLOCK
     end
 
-And get the nice unindented result you want:
+And get the nice outdented result you want:
 
     > hello
     => "<html>\n  <body>\n    <p>Hello</p>\n  </body>\n</html>\n"
@@ -69,3 +69,9 @@ Here are some examples from the Interwebs where people discuss potential solutio
 ## Alternatives
 
 * http://rubygems.org/gems/unindent
+
+## History
+
+* 2011-01-05 - Renamed project from Unindentable to Outdent
+* 2011-01-04 - Borrowed (stole?) API from [Unindent](http://rubygems.org/gems/unindent) project
+* 2009-07-09 - First version
