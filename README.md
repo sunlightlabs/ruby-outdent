@@ -68,7 +68,8 @@ Here are some examples from the Interwebs where people discuss potential solutio
 
 ## Alternatives
 
-* http://rubygems.org/gems/unindent
+* ActiveSupport provides [String#strip_heredoc](http://rubydoc.info/gems/activesupport/3.0.3/String#strip_heredoc-instance_method). Why didn't I see this before?
+* The [unindent gem](http://rubygems.org/gems/unindent).
 
 ## History
 
